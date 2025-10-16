@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Investimento Avançada</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <img src="images/besmart-logo.png" alt="Logo BeSmart" class="logo">
+  </header>
+
+  <div class="calculator">
+    <h1>Calculadora</h1>
+    <h2>Alavancagem de Patrimônio com Carta de Crédito</h2>
+
+    <form id="investmentForm">
+      <label for="patrimonioInicial">Patrimônio Inicial Investido (R$)</label>
+      <input type="number" id="patrimonioInicial" value="0" required>
+
+      <label for="rentabilidade">Rentabilidade Mensal (%)</label>
+      <input type="number" id="rentabilidade" value="0" step="0.01" required>
+
+      <label for="PrazoEst">Prazo Estimado para Contemplação (meses)</label>
+      <input type="number" id="PrazoEst" value="0" required>
+
+      <label for="cartaCredito">Valor da Carta de Crédito (R$)</label>
+      <input type="number" id="cartaCredito" value="0" required>
+
+      <label for="lanceEmbutido">Valor Lance Embutido (%)</label>
+      <input type="number" id="lanceEmbutido" value="0" step="0.01" required>
+
+      <label for="lanceLivre">Valor Lance Livre (%)</label>
+      <input type="number" id="lanceLivre" value="0" step="0.01" required>
+
+      <label for="taxaCarta">Taxa de Rendimento Carta (%)</label>
+      <input type="number" id="taxaCarta" value="0" step="0.01" required>
+
+      <button type="submit">Calcular</button>
+    </form>
+
+    <div class="result-box">
+      <h3>Resultado</h3>
+      <div id="result">Preencha os dados e clique em calcular.</div>
+    </div>
+  </div>
+
+
+  <div class="disclaimer">
+    <strong>Disclaimer | Simulador de Alavancagem Patrimonial com Consórcio</strong><br><br>
+    Esta simulação tem caráter exclusivamente informativo e ilustrativo, sendo baseada em premissas hipotéticas de mercado e retornos estimados.
+    Não representa garantia de rentabilidade, contemplação, nem recomendação de investimento. <br><br>
+    ⚠️ Importante considerar: Rentabilidade estimada: As projeções assumem uma rentabilidade mensal composta, que pode não se concretizar.
+    O desempenho passado de investimentos não garante resultados futuros. Prazo de contemplação: O consórcio é uma modalidade por sorteio e/ou lance.
+    O prazo de contemplação utilizado nesta simulação é estimado com base em lances médios de mercado, e não é garantido.
+    Lances e recursos próprios: O valor do lance livre é uma alocação adicional de capital, que pode impactar a liquidez do investidor.
+    No planejamento deste aporte pode prejudicar a saúde financeira do cliente.
+    Variações de custos: A parcela do consórcio pode sofrer variações devido a reajustes, fundo de reserva e seguros, conforme regras da administradora contratada.
+    <br><br>
+    Ao utilizar esse simulador eu assumo que “Li e compreendi que esta simulação é meramente ilustrativa e não representa garantia de resultado devido aos fatores variáveis do mercado financeiro e índices econômicos.”
+  </div>
+
+  <footer>
+    <h2>BeSmart</h2>
+    <p>Conecte-se conosco nas redes sociais!</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/grupobesmart" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/be.smart.is/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://br.linkedin.com/company/besmartis" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> BeSmart. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
